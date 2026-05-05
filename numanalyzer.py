@@ -79,3 +79,41 @@ result = smart_num_analyzer(nums)
 
 for key, value in result.items():
     print(f"{key}: {value}")
+
+"""
+LOGIC EXPLANATION:
+
+set() is used to track already seen numbers
+unique_nums keeps numbers in original order
+
+[5, 2, 5, 8, 2]
+Process:
+
+5 → not seen → add
+2 → not seen → add
+5 → already seen → skip
+8 → not seen → add
+2 → already seen → skip
+
+num % 2 == 0 → even
+otherwise → odd
+
+unique_nums = [5, 2, 8]
+even = [2, 8]
+odd = [5]
+
+Even → ascending order
+Odd → descending order
+
+even_sort = [2, 8]
+odd_sort = [5]
+
+max(even_sort) → largest even
+min(odd_sort) → smallest odd
+if even_sort else None prevents errors if list is empty
+
+largest_even = 8
+smallest_odd = 5
+
+final_list = [2, 8] + [5] = [2, 8, 5]
+"""
