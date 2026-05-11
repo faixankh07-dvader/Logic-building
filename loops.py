@@ -22,23 +22,9 @@ for w in word1:
 print(result1)
 """
 
-# reverse words in sentence
-string = input("Enter a string: ").split()
+# multiplication generator
 
-sresult = []
+i = int(input("Enter a number: "))
 
-for s in reversed(string):
-    sresult.append(s)
-
-print(sresult)
-
-# reverse string
-
-string = input("Enter a string: ")
-
-result = []
-
-for char in reversed(string):
-    result.append(char)
-
-print("".join(result))  # join combine the words reversed in a string
+for j in range(1, 11):
+    print(f"{i} x {j} = {i * j}")
