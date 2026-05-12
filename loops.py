@@ -47,3 +47,39 @@ for i in range(1, rows + 1):
         print("&", end="")
 
     print()
+
+
+# Finds unique numbers in a list Without using set()
+
+# numbers = list(map(int, input("Enter numbers separated by space: ").split()))
+nums = [1, 2, 3, 2, 4, 7, 1]
+
+unique = []
+
+for i in range(len(nums)):
+    count = 0
+    for j in range(len(nums)):
+        if nums[i] == nums[j]:
+            count += 1
+
+    if count == 1:
+        unique.append(nums[i])
+
+print(unique)
+
+# Which number appears the MOST times in the list.
+num = [1, 2, 2, 3, 1, 2, 4]
+max_count = 0
+most_frequent = num[0]
+
+for i in range(len(num)):
+    count = 0
+    for j in range(len(num)):
+        if num[i] == num[j]:
+            count += 1
+
+    if count > max_count:
+        max_count = count
+        most_frequent = num[i]
+
+print("Most frequent:", most_frequent)
