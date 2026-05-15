@@ -2,7 +2,7 @@
 num = input("Enter a number: ")
 print("Reversed:", num[::-1])  # print(text[::-1]) moves backward through the string
 """
-
+'''
 # reversing a number using loop
 n = int(input("enter: "))
 reverse = 0
@@ -53,3 +53,44 @@ if original == reverse:
     print(f"{original} is a palindrome")
 else:
     print(f"{original} is not a palindrome")
+'''
+
+#find the second largest number
+numbers = list(map(int, input("Enter numbers separated by space: ").split()))
+largest = float('-inf')
+sec_largest = float('-inf')
+
+for num in numbers:
+    if num > largest:
+        sec_largest = largest
+        largest = num 
+
+    elif num > sec_largest and num != largest:
+        sec_largest = num
+
+print("Second largest number is:", sec_largest)
+
+#find the second smallest number
+numbers = [12, 45, 7, 89, 34]
+smallest = float('inf')
+second_smallest = float('inf')
+
+for num in numbers:
+    if num < smallest:
+        second_smallest = smallest
+        smallest = num
+
+    elif num < second_smallest and num != smallest:
+        second_smallest = num
+
+print("Second smallest number is:", second_smallest)
+
+
+numbers = list(map(int, input("Enter numbers separated by space: ").split()))
+largest = numbers[0]
+
+for num in numbers:
+    if num > largest:
+        largest = num
+
+print(f"{num} is the largest number")
