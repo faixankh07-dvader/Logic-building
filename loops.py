@@ -83,3 +83,21 @@ for i in range(len(num)):
         most_frequent = num[i]
 
 print("Most frequent:", most_frequent)
+
+
+#most frequent character in a string
+text = input("Enter list of words: ")
+max_count = 0
+most_frequent_char = ""
+
+for i in range(len(text)):
+    count = 0
+    for j in range(len(text)):
+        if text[i] == text[j]:
+            count += 1
+    
+    if count > max_count:
+        max_count = count
+        most_frequent_char = text[i]
+
+print("Most frequent character: ", most_frequent_char)
