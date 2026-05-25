@@ -3,19 +3,42 @@ balance = 10000
 
 while True:
     try:
-        user = input("enter withdrawal amount ( or press exit): ")
+        print("\n1. Withdraw")
+        print("2. Deposit")
+        print("3. Exit")
 
-        if user.lower() == "exit":
-           break
+        choice = input("Choose an option: ")
+
+        if choice == "3":
+            break
+
+        elif choice == "1":
+            amount = int(input("enter withdrawal amount ( or press exit): "))
+
+            if amount <= 0:
+               print(" Enter a valid positive amount.")
     
-        amount = int(user)
-    
-        if amount > balance:
-            print("Insufficient funds")
+            elif amount > balance:
+               print("Insufficient funds")
+            else:
+               balance -= amount
+               print("WITHDRAWAL SUCCESSFUL")
+               print("Remaining Balance:", balance)
+
+        elif choice == "2":
+            amount = int(input("Enter deposit amount ( or press exit): "))
+
+            if amount <= 0:
+                print("Enter a valid positive amount.")
+
+            else:
+                balance+=amount
+                print("DEPOSIT SUCCESSFULL")
+                print("Remaining Balance:", balance)
+
         else:
-            balance -= amount
-            print("Remaining Balance:", balance)
-    
+            print("Invalid choice")
+
     except ValueError:
         print("Invalid input! Enter amount. ")
 
