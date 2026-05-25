@@ -43,3 +43,16 @@ result3 = list(
     map(lambda x: abs(x) if x < 0 else x / 2 if x % 2 == 0 else x * 3, nums2)
 )
 print(result3)
+
+#beginner version of the above code
+'''
+def transform(x):
+    if x < 0:
+        return abs(x)
+    elif x % 2 == 0:
+        return x / 2
+    else:
+        return x * 3
+
+result = list(map(transform, nums2))
+'''

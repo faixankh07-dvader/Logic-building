@@ -17,9 +17,7 @@ for char in reversed(sentence):
 
 print("".join(result))  # join combine the words reversed in a string
 
-
 # clean and reverse words
-
 
 def reverse_words(sentence):
     words = sentence.split()
