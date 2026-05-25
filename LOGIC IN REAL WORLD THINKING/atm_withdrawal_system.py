@@ -17,7 +17,7 @@ while True:
             print("Remaining Balance:", balance)
     
     except ValueError:
-        print("Invalid input! must be positive")
+        print("Invalid input! Enter amount. ")
 
 print("Final Balance:", balance)
 
